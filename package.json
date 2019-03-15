@@ -1,0 +1,12 @@
+{
+  "name": "zelip.me",
+  "private": true,
+  "scripts": {
+    "build": "gridsome build",
+    "develop": "gridsome develop",
+    "explore": "gridsome explore"
+  },
+  "dependencies": {
+    "gridsome": "^0.5.0"
+  }
+}
