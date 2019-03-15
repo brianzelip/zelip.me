@@ -1,10 +1,11 @@
 <template>
   <header class="sm-mt4 md-mt5 narrow-container">
     <div class="flex flex-column align-center sm-flex-row sm-justify-center py2 sm-py0">
-      <img
+      <g-image
+        :src="`img/bz-livingroom0.jpg`"
+        alt="Brian Zelip"
         class="circle mb1 sm-mb0 sm-mr2 w-200px md-250px"
-        src="img/bz-livingroom0.jpg"
-      >
+      />
       <div class="px1 center sm-left-align">
         <h1 class="m0 h0 lh-1p2 white">Brian Zelip</h1>
         <!-- <p class="m0 p0 white h1 lh-1">web &middot; data &middot; teaching</p> -->
