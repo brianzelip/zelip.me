@@ -2,9 +2,9 @@
   "name": "zelip.me",
   "private": true,
   "scripts": {
-    "build": "gridsome build",
-    "develop": "gridsome develop",
-    "explore": "gridsome explore"
+    "start": "gridsome develop",
+    "explore": "gridsome explore",
+    "build": "gridsome build"
   },
   "dependencies": {
     "gridsome": "^0.5.0"
