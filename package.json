@@ -1,6 +1,12 @@
 {
   "name": "zelip.me",
-  "private": true,
+  "version": "0.1.0",
+  "description": "Brian Zelip's home page.",
+  "author": {
+    "name": "Brian Zelip",
+    "url": "https://zelip.me"
+  },
+  "private": false,
   "scripts": {
     "start": "gridsome develop",
     "explore": "gridsome explore",
