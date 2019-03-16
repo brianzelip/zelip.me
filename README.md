@@ -20,6 +20,8 @@ This project doesn't intend to embrace one of the main features of Gridsome: tha
 
 I'd like to write some portions/content of the site in markdown. My bio line is a good example.
 
+Instead of writing the raw html, like via index.html in brianzelip.github.io, or via a template literal in vue like in commit #dec9e0183, I'd like to write the bio in markdown, and **only** edit such a natural prose-writing environment when it comes to changing _textual/narrative/prose content_ of the site.
+
 As a result, I think the direction I want to take includes a workflow something like the following:
 
 1. write some content in markdown
