@@ -1,24 +1,18 @@
 <template>
   <Layout>
-    <main class="sm-mt3 md-mt4 sm-mb4 narrow-container white">
-      <div class="flex flex-column">
-        <p
-          class="h2 p1 m0 fw-200"
-          v-html="bio"
-        ></p>
-      </div>
-    </main>
+    <TheHeader></TheHeader>
+    <TheBio></TheBio>
   </Layout>
 </template>
 
 <script>
-import Bio from "../content/bio.md";
+import TheHeader from "../components/TheHeader.vue";
+import TheBio from "../components/TheBio.vue";
 
 export default {
-  computed: {
-    bio() {
-      return Bio;
-    }
+  components: {
+    TheHeader,
+    TheBio
   }
 };
 </script>
