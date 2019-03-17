@@ -5,18 +5,14 @@
 // To restart press CTRL + C in terminal and run `gridsome develop`
 
 module.exports = {
-  siteName: 'Gridsome',
-  transformers: {
-    remark: {
-      externalLinksTarget: '_blank'
-    }
-  },
+  siteName: 'Brian Zelip',
+  siteUrl: 'https://zelip.me',
+  siteDescription: "Brian Zelip's home page.",
   plugins: [
     {
       use: '@gridsome/source-filesystem',
       options: {
-        path: 'src/content/**/*.md',
-        remark: {}
+        path: 'src/content/**/*.md'
       }
     }
   ]
