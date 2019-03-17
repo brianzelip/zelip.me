@@ -10,12 +10,12 @@
 </template>
 
 <script>
-import Bio from "../content/bio.md";
+// import Bio from "../content/bio.md";
 
 export default {
   computed: {
     bio() {
-      return Bio;
+      return "Bio";
     }
   }
 };

@@ -12,7 +12,8 @@ module.exports = {
     {
       use: '@gridsome/source-filesystem',
       options: {
-        path: 'src/content/**/*.md'
+        path: 'src/content/**/*.md',
+        typeName: 'Bio'
       }
     }
   ]

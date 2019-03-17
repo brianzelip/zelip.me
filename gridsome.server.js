@@ -5,8 +5,23 @@
 // Changes here requires a server restart.
 // To restart press CTRL + C in terminal and run `gridsome develop`
 
-module.exports = function (api) {
+// import Bio from 'src/content/bio.md';
+
+module.exports = function(api) {
   api.loadSource(store => {
-    // Use the Data store API here: https://gridsome.org/docs/data-store-api
-  })
-}
+    store.addContentType({
+      typeName: 'Bio'
+    });
+  });
+};
+// module.exports = function(api) {
+//   api.loadSource(store => {
+//     const bio = store.addContentType({
+//       typeName: 'Bio'
+//     });
+
+//     bio.addNode({
+//       Bio
+//     });
+//   });
+// };
