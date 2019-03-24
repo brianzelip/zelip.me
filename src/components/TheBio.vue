@@ -10,12 +10,15 @@
 </template>
 
 <script>
-// import Bio from "../content/bio.md";
+import MarkdownIt from "markdown-it";
+
+import Bio from "../content/bio.md";
 
 export default {
   computed: {
     bio() {
-      return "Bio";
+      const md = new MarkdownIt();
+      return md.render(Bio);
     }
   }
 };
