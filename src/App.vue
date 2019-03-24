@@ -1,21 +1,18 @@
 <template>
   <div>
-    <h1>Brian Zelip</h1>
-    <div v-html="bio"></div>
+    <TheHeader></TheHeader>
+    <TheBio></TheBio>
   </div>
 </template>
 
 <script>
-import MarkdownIt from "markdown-it";
-
-import Bio from "./content/bio.md";
+import TheHeader from "./components/TheHeader.vue";
+import TheBio from "./components/TheBio.vue";
 
 export default {
-  computed: {
-    bio() {
-      const md = new MarkdownIt();
-      return md.render(Bio);
-    }
+  components: {
+    TheHeader,
+    TheBio
   }
 };
 </script>
