@@ -15,3 +15,5 @@ The initial work on master branch included:
 - ending point: v0.2.0
 - see README.md for reasons behind this
 - steps:
+  - got rid of all the gridsome stuff, kept the vue components and logic
+  - got DIY markdown in vue working
