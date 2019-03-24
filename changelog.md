@@ -17,3 +17,13 @@ The initial work on master branch included:
 - steps:
   - got rid of all the gridsome stuff, kept the vue components and logic
   - got DIY markdown in vue working
+
+2. Port existing zelip.me UI to this repo
+
+- starting point: v0.2.1
+- starting branch: port-existing-site
+- ending point: v0.3.0
+- steps:
+  - modify the components already here in the repo
+
+Note: I don't like how I had to create the extra div wrapper for the markdown content. What then happens, is the styles for the markdown content have to go to the parent div for the markdown content to inherit. That's wack.
