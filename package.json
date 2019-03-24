@@ -15,5 +15,7 @@
   "dependencies": {
     "vue": "^2.6.10"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "markdown-it": "^8.4.2"
+  }
 }
