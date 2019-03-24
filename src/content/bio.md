@@ -1,1 +1,1 @@
-Brian Zelip is a husband, father, and librarian. He runs the [HS/HSL Innovation Space](http://www.hshsl.umaryland.edu/services/ispace), where he collaborates with library users to solve problems through design, 3D printing, and code.
+Brian Zelip is a husband, father, and librarian based in Baltimore. He runs the University of Maryland [HS/HSL Innovation Space](http://www.hshsl.umaryland.edu/services/ispace), where he collaborates with library users to solve problems through design, 3D printing, and code.
