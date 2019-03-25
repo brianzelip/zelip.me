@@ -14,28 +14,28 @@
             class="h2 white sm-px0 sm-m0 green-underline text-decoration-none lh-1"
             href="mailto:brian.zelip@gmail.com"
           >
-            <i class="fa fa-envelope-o sm-hide"></i>
+            <i class="fal fa-envelope sm-hide"></i>
             <span class="none sm-block">Email</span>
           </a>
           <a
             class="h2 white sm-px0 sm-m0 green-underline text-decoration-none lh-1"
             href="https://github.com/brianzelip"
           >
-            <i class="fa fa-github sm-hide"></i>
+            <i class="fab fa-github sm-hide"></i>
             <span class="none sm-block">GitHub</span>
           </a>
           <a
             class="h2 white sm-px0 sm-m0 green-underline text-decoration-none lh-1"
             href="https://twitter.com/bzelip"
           >
-            <i class="fa fa-twitter sm-hide"></i>
+            <i class="fab fa-twitter sm-hide"></i>
             <span class="none sm-block">Twitter</span>
           </a>
           <a
             class="h2 white sm-px0 sm-m0 green-underline text-decoration-none lh-1"
             href="https://www.linkedin.com/in/zelip"
           >
-            <i class="fa fa-linkedin sm-hide"></i>
+            <i class="fab fa-linkedin-in sm-hide"></i>
             <span class="none sm-block">LinkedIn</span>
           </a>
         </nav>
