@@ -27,3 +27,69 @@ The initial work on master branch included:
   - modify the components already here in the repo
 
 Note: I don't like how I had to create the extra div wrapper for the markdown content. What then happens, is the styles for the markdown content have to go to the parent div for the markdown content to inherit. That's wack.
+
+3. CSS
+
+- starting point v0.3.0
+- ending point: v0.4.0
+- starting branch: css
+- steps:
+  - thought about making my own stylesheet of _only_ the styles needed on this project, but I don't really want to put that work into it right now.
+  - I'd like to try [Purgecss](https://www.purgecss.com/), via [parcel-plugin-purgecss](https://github.com/cprecioso/parcel-plugin-purgecss)
+  - this means that my repo will be heavy on css (via the basscss stuff), but that's alright. At least the shipped document size will be as small as possible.
+
+**CSS module thoughts: _Atomic css in the component, es6 import, bundler era_**
+
+- every individual class is exported from its source file, something like:
+
+  ```js
+  // padding.js
+
+  const p0 = { padding: 0}
+  const p1 = { padding: 0.5rem}
+  const p2 = { padding: 1rem}
+  const p3 = { padding: 2rem}
+  const p4 = { padding: 4rem}
+
+  export { p0, p1, p2, p3, p4 };
+  ```
+
+  The code example above is not scalable, and isn't a smart use of js!
+  Much refactoring should happen to make this creation of a style palette
+  more automated and dynamic. Something more akin to:
+
+  > the export default is a function that takes in some value
+  > provided by the developer during component development.
+
+- there can be groups of classes that can be installed together, ie: flexbox
+- the overall css library can be installed via npm
+- the library and/or individual classes and/or groups of classes
+  can be es6 imported
+
+---
+
+Follow up for CSS branch work after diving into Purgecss, etc.
+
+The parcel-plugin-purgecss worked! Ultimately, it was as easy as:
+
+1. `npm i -D parcel-plugin-purgecss`
+2. create purgecss.config.js and point it at the sources of markup and styles, ie:
+
+```js
+// purgecss.config.js
+module.exports = {
+  content: ['index.html', 'src/**/*.vue'],
+  css: ['src/css/main.css']
+};
+```
+
+I brought in all css files locally, and creted a main.css file that imports all the actual goods. Parcel handles this beautifully! It didn't even install any new deps when it ran into:
+
+```css
+/* main.css */
+@import './basscss.css';
+@import './zelip.me.css';
+@import './font-awesome.css';
+```
+
+After this branch gets merged w/ master, I'm sure the percentage of css content in the repo is going to skyrocket. **Because of this, I still want to work on componentized css!**
