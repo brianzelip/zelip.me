@@ -65,3 +65,31 @@ Note: I don't like how I had to create the extra div wrapper for the markdown co
 - the overall css library can be installed via npm
 - the library and/or individual classes and/or groups of classes
   can be es6 imported
+
+---
+
+Follow up for CSS branch work after diving into Purgecss, etc.
+
+The parcel-plugin-purgecss worked! Ultimately, it was as easy as:
+
+1. `npm i -D parcel-plugin-purgecss`
+2. create purgecss.config.js and point it at the sources of markup and styles, ie:
+
+```js
+// purgecss.config.js
+module.exports = {
+  content: ['index.html', 'src/**/*.vue'],
+  css: ['src/css/main.css']
+};
+```
+
+I brought in all css files locally, and creted a main.css file that imports all the actual goods. Parcel handles this beautifully! It didn't even install any new deps when it ran into:
+
+```css
+/* main.css */
+@import './basscss.css';
+@import './zelip.me.css';
+@import './font-awesome.css';
+```
+
+After this branch gets merged w/ master, I'm sure the percentage of css content in the repo is going to skyrocket. **Because of this, I still want to work on componentized css!**
