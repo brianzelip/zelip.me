@@ -94,6 +94,7 @@ const uniqueClasses = classes
     acc.includes(className) ? null : acc.push(className);
     return acc;
   }, [])
-  .sort();
+  .sort()
+  .join('\n');
 
-console.log('uniqueClasses:', uniqueClasses);
+console.log(uniqueClasses);
