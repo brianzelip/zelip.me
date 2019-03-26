@@ -20,10 +20,5 @@ console.log('body POST body.removeChild()', document.body.innerHTML);
 const unbundledHTML = dom.serialize();
 
 console.log('unbundledHTML::::', unbundledHTML);
-/*
-final string =
 
-<doctype>
-<html>
-
-*/
+fs.writeFileSync(file, unbundledHTML, 'utf8');
