@@ -121,3 +121,10 @@ removeElement.js does the following:
 1. finds file to remove element from based on argument (dist/index.html)
 2. removes element from file
 3. saves file
+
+---
+
+Post development reflection - it worked!🎉
+
+- changed script name to postBundle.js from removeElement.js
+- this shaves off the 150+ kb js bundle file that was sent to the user!
