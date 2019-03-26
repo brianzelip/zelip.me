@@ -1,3 +1,4 @@
+// removes the js bundle injected into dist/index.html for production
 const fs = require('fs');
 const jsdom = require('jsdom');
 
