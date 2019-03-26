@@ -104,3 +104,20 @@ After this branch gets merged w/ master, I'm sure the percentage of css content 
 Here is the general idea:
 
 after `parcel build index.html`, feed dist/index.html into a function that returns it with the `<script>` element removed (parcel loads the bundle js file (even though _there is no javascript in use on the page_)
+
+this implies:
+
+- a js program that can be ran from CLI, ie: `node program.js`
+- the `build` script gets updated to something like:
+
+```json
+{
+  "build": "rm -rf dist .cache && parcel build index.html && node program.js"
+}
+```
+
+program.js does the following:
+
+1. finds dist/index.html
+2. removes script tag from dist/index.html
+3. saves dist/index.html
