@@ -121,3 +121,12 @@ removeElement.js does the following:
 1. finds file to remove element from based on argument (dist/index.html)
 2. removes element from file
 3. saves file
+
+4. Point custom domain at netlify
+
+- starting point: v0.5.0
+- ending point: v1.0.0
+- starting branch: domain
+- steps:
+  - change pointers in godaddy
+  - deprecate brianzelip.github.io
