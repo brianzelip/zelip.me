@@ -1,4 +1,5 @@
-// removes the js bundle injected into dist/index.html for production
+// Run after parcel build index.html!
+// removes the js bundle injected into dist/index.html
 const fs = require('fs');
 const jsdom = require('jsdom');
 
