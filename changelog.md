@@ -121,3 +121,32 @@ removeElement.js does the following:
 1. finds file to remove element from based on argument (dist/index.html)
 2. removes element from file
 3. saves file
+
+---
+
+4. Point custom domain at netlify
+
+- starting point: v0.5.0
+- ending point: v1.0.0
+- starting branch: domain
+- steps:
+  - change pointers in godaddy
+  - deprecate brianzelip.github.io
+
+Netlify custom domain set up resources:
+
+1. [Custom Domains](https://www.netlify.com/docs/custom-domains/)
+2. [To WWW or not WWW](https://www.netlify.com/blog/2017/02/28/to-www-or-not-www/)
+3. [Manual DNS Configuration for Root and WWW Custom Domains](https://www.netlify.com/docs/custom-domains/#manual)
+
+- This screenshot was particulary useful for configuring Godaddy DNS:
+
+![Godaddy DNS records panel](https://cdn.netlify.com/ea7e82783411b2f0cdf69136d492cb69215470c0/a1706/img/blog/godaddy-dns-records.png)
+
+Here is the documentation for the records that I added to my Goadaddy DNS config for this branch work:
+
+```tsv
+CNAME	www	zelip.netlify.com	1 Hour
+
+A	@	104.198.14.52	1 Hour
+```
