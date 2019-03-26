@@ -107,17 +107,17 @@ after `parcel build index.html`, feed dist/index.html into a function that retur
 
 this implies:
 
-- a js program that can be ran from CLI, ie: `node program.js`
+- a js program that can be ran from CLI, ie: `node removeElement.js`
 - the `build` script gets updated to something like:
 
 ```json
 {
-  "build": "rm -rf dist .cache && parcel build index.html && node program.js"
+  "build": "rm -rf dist .cache && parcel build index.html && node removeElement.js dist/index.html"
 }
 ```
 
-program.js does the following:
+removeElement.js does the following:
 
-1. finds dist/index.html
-2. removes script tag from dist/index.html
-3. saves dist/index.html
+1. finds file to remove element from based on argument (dist/index.html)
+2. removes element from file
+3. saves file
