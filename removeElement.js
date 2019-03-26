@@ -1,1 +1,9 @@
-console.log('process.argv:', process.argv[2]);
+const fs = require('fs');
+const jsdom = require('jsdom');
+
+const { JSDOM } = jsdom;
+const file = process.argv[2];
+const html = fs.readFileSync(file).toString();
+
+console.log('file:', file);
+console.log('html', html);
