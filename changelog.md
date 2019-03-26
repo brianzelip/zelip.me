@@ -93,3 +93,14 @@ I brought in all css files locally, and creted a main.css file that imports all 
 ```
 
 After this branch gets merged w/ master, I'm sure the percentage of css content in the repo is going to skyrocket. **Because of this, I still want to work on componentized css!**
+
+4. Programmatically remove the bundle loaded via `<script>` in dist/index.html
+
+- starting point: v0.4.0
+- ending poing: v0.5.0
+- starting branch: unbundle
+- steps:
+
+Here is the general idea:
+
+after `parcel build index.html`, feed dist/index.html into a function that returns it with the `<script>` element removed (parcel loads the bundle js file (even though _there is no javascript in use on the page_)
