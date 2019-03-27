@@ -8,7 +8,7 @@ The initial work on master branch included:
 - stripping away gridsome default content
 - bringing in the `<header>` from zelip.me
 
-1. Add prose content to site build pipeline via markdown
+## 1. Add prose content to site build pipeline via markdown
 
 - starting point: v0.1.0
 - starting branch: markdown
@@ -18,7 +18,7 @@ The initial work on master branch included:
   - got rid of all the gridsome stuff, kept the vue components and logic
   - got DIY markdown in vue working
 
-2. Port existing zelip.me UI to this repo
+## 2. Port existing zelip.me UI to this repo
 
 - starting point: v0.2.1
 - starting branch: port-existing-site
@@ -28,7 +28,7 @@ The initial work on master branch included:
 
 Note: I don't like how I had to create the extra div wrapper for the markdown content. What then happens, is the styles for the markdown content have to go to the parent div for the markdown content to inherit. That's wack.
 
-3. CSS
+## 3. CSS
 
 - starting point v0.3.0
 - ending point: v0.4.0
@@ -94,7 +94,7 @@ I brought in all css files locally, and creted a main.css file that imports all 
 
 After this branch gets merged w/ master, I'm sure the percentage of css content in the repo is going to skyrocket. **Because of this, I still want to work on componentized css!**
 
-4. Programmatically remove the bundle loaded via `<script>` in dist/index.html
+## 4. Programmatically remove the bundle loaded via `<script>` in dist/index.html
 
 - starting point: v0.4.0
 - ending poing: v0.5.0
@@ -124,7 +124,7 @@ removeElement.js does the following:
 
 ---
 
-4. Point custom domain at netlify
+## 5. Point custom domain at netlify
 
 - starting point: v0.5.0
 - ending point: v1.0.0
