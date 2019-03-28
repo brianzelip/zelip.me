@@ -150,3 +150,11 @@ CNAME	www	zelip.netlify.com	1 Hour
 
 A	@	104.198.14.52	1 Hour
 ```
+
+## 6. Refactor font-awesome from css/webfonts to svg/vue components
+
+- starting point: v1.0.0
+- ending point: v1.1.0
+- branch: fa-upgrade
+- steps:
+  - follow the [vue-awesome docs](https://github.com/Justineo/vue-awesome)
