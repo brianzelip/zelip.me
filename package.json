@@ -9,8 +9,8 @@
   "private": false,
   "scripts": {
     "start": "parcel index.html",
-    "build": "rm -rf dist .cache && parcel build index.html && node postBuild.js",
-    "netlify": "rm -rf dist .cache && npm config set //npm.fontawesome.com/:_authToken ${fa_token} && parcel build index.html && node postBuild.js"
+    "build0": "rm -rf dist .cache && parcel build index.html && node postBuild.js",
+    "build": "rm -rf dist .cache && npm config set //npm.fontawesome.com/:_authToken ${fa_token} && parcel build index.html && node postBuild.js"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.17",
