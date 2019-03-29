@@ -14,7 +14,11 @@
             class="h2 white sm-px0 sm-m0 green-underline text-decoration-none lh-1"
             href="mailto:brian.zelip@gmail.com"
           >
-            <i class="fal fa-envelope sm-hide"></i>
+            <!-- <i class="fal fa-envelope sm-hide"></i> -->
+            <font-awesome-icon
+              :icon="envelope"
+              class="sm-hide"
+            ></font-awesome-icon>
             <span class="none sm-block">Email</span>
           </a>
           <a
