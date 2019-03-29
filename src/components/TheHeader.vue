@@ -43,3 +43,33 @@
     </div>
   </header>
 </template>
+
+<script>
+import Vue from "vue";
+import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
+import {
+  faGithub,
+  faTwitter,
+  faLinkedinIn
+} from "@fortawesome/free-brands-svg-icons";
+import { faEnvelope } from "@fortawesome/pro-light-svg-icons";
+
+Vue.component("font-awesome-icon", FontAwesomeIcon);
+
+export default {
+  computed: {
+    envelope() {
+      return faEnvelope;
+    },
+    github() {
+      return faGithub;
+    },
+    twitter() {
+      return faTwitter;
+    },
+    linkedin() {
+      return faLinkedinIn;
+    }
+  }
+};
+</script>
