@@ -49,18 +49,16 @@
 </template>
 
 <script>
-import Vue from "vue";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
+import { faEnvelope } from "@fortawesome/pro-light-svg-icons";
 import {
   faGithub,
   faTwitter,
   faLinkedinIn
 } from "@fortawesome/free-brands-svg-icons";
-import { faEnvelope } from "@fortawesome/pro-light-svg-icons";
-
-Vue.component("font-awesome-icon", FontAwesomeIcon);
 
 export default {
+  components: { FontAwesomeIcon },
   computed: {
     envelope() {
       return faEnvelope;
