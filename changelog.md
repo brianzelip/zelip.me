@@ -158,3 +158,5 @@ A	@	104.198.14.52	1 Hour
 - branch: fa-upgrade
 - steps:
   - follow the [vue-awesome docs](https://github.com/Justineo/vue-awesome)
+  - will need to use the fontawesome token for their private npm registry
+    - this requires use of netlify's environment variables that i'll have to look into
