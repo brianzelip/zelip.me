@@ -160,3 +160,6 @@ A	@	104.198.14.52	1 Hour
   - follow the [vue-awesome docs](https://github.com/Justineo/vue-awesome)
   - will need to use the fontawesome token for their private npm registry
     - this requires use of netlify's environment variables that i'll have to look into
+  - included looking into the [.npmrc file](https://docs.npmjs.com/files/npmrc) and environment variables
+  - set up netlify build environment variable for font awesome pro token
+  - solved the npm config bug by [changing the env variable syntax in the npm config file](https://stackoverflow.com/a/48728994/2145103), via commit #a34a7b0.
