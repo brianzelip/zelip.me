@@ -170,8 +170,42 @@ A	@	104.198.14.52	1 Hour
 
 #### zelip.me, master branch, behind fa-upgrade branch
 
-html: 1.29kb
-css: 2.18kb
-jpg: 62.69kb
-fa-light.woff2: 153.76kb
-fa-brands.woff2: 73.42kb
+html: 2.03kb
+css: 5.59kb
+jpg: 62.32kb
+fa-light.woff2: 153.38kb
+fa-brands.woff2: 73.05kb
+
+**Total: 296.37**
+
+#### fa-upgrade branch, before fa API config autoAddCss
+
+html: 12.69kb (gained 10.66)
+css: 3.16kb (lost 2.43)
+jpg: 62.32kb
+webfonts (lost 226.43)
+
+**Total: 78.17**
+
+##### Difference, pre-fa API config, and considering webfonts
+
+**_Difference: 218.2kb, or 73.6% reduction_**
+
+The difference is:
+
+- increased html (+10.66kb): because swapping one line element `<i>` for multi-line `<svg>` and injecting css into `<head>`, to a tune off PLUS 10.66
+
+- decreased css (-2.43kb): because deletion of css and webfonts dependency
+
+- deleted webfonts (-226.43kb): because deletion of css and webfonts dependency
+
+##### Difference, pre-fa API config, and NOT considering webfonts
+
+master branch total, no webfonts: 69.94
+fa-upgrade branch total: 78.17
+
+**_difference: gained 8.23kb_**
+
+So, not considering web fonts, master is better. And yes, web fonts get cached, so after initial load, the fonts are cached. But, first impression matters, cause how many folks will be going to _this_ site. (A different site may be a very different matter, tought for the future.) And yes, mobile matters. So the webfonts loss is great. But, I'm going to find a way to remove more css soon, so stay tuned!
+
+##### Difference, post-fa API config, and considering webfonts
