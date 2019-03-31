@@ -163,3 +163,15 @@ A	@	104.198.14.52	1 Hour
   - included looking into the [.npmrc file](https://docs.npmjs.com/files/npmrc) and environment variables
   - set up netlify build environment variable for font awesome pro token
   - solved the npm config bug by [changing the env variable syntax in the npm config file](https://stackoverflow.com/a/48728994/2145103), via commit #a34a7b0.
+    - Also, see my [!SO answer to the same question](https://stackoverflow.com/a/55441931/2145103) I had!!
+    - Also see [this gist guidance](https://stackoverflow.com/a/55441931/2145103) as a result of my work on this branch.
+
+### Analysis of the perf impact of refactoring font awesome usage
+
+#### zelip.me, master branch, behind fa-upgrade branch
+
+html: 1.29kb
+css: 2.18kb
+jpg: 62.69kb
+fa-light.woff2: 153.76kb
+fa-brands.woff2: 73.42kb
