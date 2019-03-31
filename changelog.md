@@ -257,3 +257,27 @@ So, redirecting the fa auto injected css from the dom to a stylesheet where purg
 | woff2b   | 73.05  | 0                         | 0                          |
 
 \* all numbers in kb
+
+### On configuring Purgecss for font awesome, or
+
+On getting fa-svg-core and vue-fontawesome together to play nicely with purgecss
+
+this branch added the following to purgecss.config.js:
+
+```js
+{
+  whitelistPatterns: [/svg-inline--fa/, /fa-w-14$/, /fa-w-16$/],
+  keyframes: true
+}
+```
+
+**The reason for the file update**
+
+I thought this branch's work was complete, until I looked at the branch preview and found that the FA styles were not being applied to the FA icons (that is, the icons were rendered, but the icons were YUUUGE). Inspecting the built css file, sure enough, the only FA-specific styles that made it to production were a pair of @keyframes.
+
+I tried a bunch of adjustments, but nothing worked.
+
+Then I finally read the [Purgecss configuration docs](https://www.purgecss.com/configuration).
+
+- `keyframes: true`, eleminates any unused keyframes
+- `whitelistPatterns: [/svg-inline--fa/, /fa-w-14$/, /fa-w-16$/]`, gets the four styles needed to render my use of FA
