@@ -57,6 +57,7 @@
 </template>
 
 <script>
+import { config } from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 import { faEnvelope } from "@fortawesome/pro-light-svg-icons";
 import {
