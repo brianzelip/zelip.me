@@ -66,6 +66,8 @@ import {
   faLinkedinIn
 } from "@fortawesome/free-brands-svg-icons";
 
+config.autoAddCss = false;
+
 export default {
   components: { FontAwesomeIcon },
   computed: {
