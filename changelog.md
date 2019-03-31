@@ -171,24 +171,22 @@ A	@	104.198.14.52	1 Hour
 
 #### zelip.me, master branch, behind fa-upgrade branch
 
-html: 2.03kb
-css: 5.59kb
-jpg: 62.32kb
-fa-light.woff2: 153.38kb
-fa-brands.woff2: 73.05kb
-
-**Total: 296.37**
+- html: 2.03kb
+- css: 5.59kb
+- jpg: 62.32kb
+- fa-light.woff2: 153.38kb
+- fa-brands.woff2: 73.05kb
+  - **Total: 296.37**
 
 #### fa-upgrade branch, before fa API config autoAddCss
 
-html: 12.69kb (gained 10.66)
-css: 3.16kb (lost 2.43)
-jpg: 62.32kb
-webfonts (lost 226.43)
+- html: 12.69kb (gained 10.66)
+- css: 3.16kb (lost 2.43)
+- jpg: 62.32kb
+- webfonts (lost 226.43)
+  - **Total: 78.17**
 
-**Total: 78.17**
-
-##### Difference, pre-fa API config, and considering webfonts
+##### Difference with master, pre-fa API config, and considering webfonts
 
 **_Difference: 218.2kb, or 73.6% reduction_**
 
@@ -196,17 +194,66 @@ The difference is:
 
 - increased html (+10.66kb): because swapping one line element `<i>` for multi-line `<svg>` and injecting css into `<head>`, to a tune off PLUS 10.66
 
-- decreased css (-2.43kb): because deletion of css and webfonts dependency
+- decreased css (-2.43kb): because deletion of css and webfonts dependency, and new svg in js font-awesome styles injected into dom not stylesheet
 
 - deleted webfonts (-226.43kb): because deletion of css and webfonts dependency
 
-##### Difference, pre-fa API config, and NOT considering webfonts
+##### Difference with master, pre-fa API config, and NOT considering webfonts
 
-master branch total, no webfonts: 69.94
-fa-upgrade branch total: 78.17
+- master branch total, no webfonts: 69.94
+- fa-upgrade branch total: 78.17
 
-**_difference: gained 8.23kb_**
+  - **_difference: gained 8.23kb_**
 
 So, not considering web fonts, master is better. And yes, web fonts get cached, so after initial load, the fonts are cached. But, first impression matters, cause how many folks will be going to _this_ site. (A different site may be a very different matter, tought for the future.) And yes, mobile matters. So the webfonts loss is great. But, I'm going to find a way to remove more css soon, so stay tuned!
 
-##### Difference, post-fa API config, and considering webfonts
+#### fa-upgrade branch, after fa API config autoAddCss
+
+- html: 5.65kb
+- css: 3.43kb
+- jpg: 62.32kb
+- webfonts (lost 226.43)
+  - **Total: 71.4**
+
+##### Difference with master, post-fa API config, and considering webfonts
+
+- master total = 296.37
+- this branch point total = 71.4
+
+**_Difference: 224.97kb, or 75.9% reduction_**
+
+- increased html (+3.62kb): because swapping one line element `<i>` for multi-line `<svg>`, and no injected styles in the `<head>`
+
+- decreased css (-2.16kb): because deletion of css and webfonts dependency, and added styles to css via main.css
+
+- deleted webfonts (-226.43kb): because deletion of css and webfonts dependency
+
+##### Difference with master, post-fa API config, and NOT considering webfonts
+
+- master branch total, no webfonts: 69.94
+- fa-upgrade branch total: 71.4
+
+  - **_difference: gained 1.46kb_**
+
+So, the difference for desktop being a gain of 1.46kb, while the loss for mobile being over 100kb, IS SO AWESOME!
+
+##### Difference with fa-upgrade pre-fa API config and fa-upgrade post-fa API config
+
+- fa-upgrade pre-fa API config total: 78.17
+- fa-upgrade post-fa API config total: 71.4
+
+  - **_difference: lost 6.77kb_**
+
+So, redirecting the fa auto injected css from the dom to a stylesheet where purgecss has access to it IS SO AWESOME!
+
+#### Analysis conclusion
+
+| resource | master | fa-upgrade pre-API config | fa-upgrade post-API config |
+| -------- | ------ | ------------------------- | -------------------------- |
+| html     | 2.03   | 12.69                     | 5.65                       |
+| css      | 5.59   | 3.16                      | 3.43                       |
+| jpg      | 62.32  | 62.32                     | 62.32                      |
+| woff2a   | 153.38 | 0                         | 0                          |
+| woff2b   | 73.05  | 0                         | 0                          |
+
+\* all numbers in kb
