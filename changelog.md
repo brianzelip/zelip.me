@@ -210,39 +210,39 @@ So, not considering web fonts, master is better. And yes, web fonts get cached, 
 #### fa-upgrade branch, after fa API config autoAddCss
 
 - html: 5.65kb
-- css: 3.43kb
+- css: 3.35kb
 - jpg: 62.32kb
 - webfonts (lost 226.43)
-  - **Total: 71.4**
+  - **Total: 71.32**
 
 ##### Difference with master, post-fa API config, and considering webfonts
 
 - master total = 296.37
-- this branch point total = 71.4
+- this branch point total = 71.32
 
-**_Difference: 224.97kb, or 75.9% reduction_**
+**_Difference: 225.05kb, or 75.9% reduction_**
 
 - increased html (+3.62kb): because swapping one line element `<i>` for multi-line `<svg>`, and no injected styles in the `<head>`
 
-- decreased css (-2.16kb): because deletion of css and webfonts dependency, and added styles to css via main.css
+- decreased css (-2.24kb): because deletion of css and webfonts dependency, and added styles to css via main.css
 
 - deleted webfonts (-226.43kb): because deletion of css and webfonts dependency
 
 ##### Difference with master, post-fa API config, and NOT considering webfonts
 
 - master branch total, no webfonts: 69.94
-- fa-upgrade branch total: 71.4
+- fa-upgrade branch total: 71.32
 
-  - **_difference: gained 1.46kb_**
+  - **_difference: gained 1.38kb_**
 
-So, the difference for desktop being a gain of 1.46kb, while the loss for mobile being over 100kb, IS SO AWESOME!
+So, the difference for desktop being a gain of 1.38kb, while the loss for mobile being over 100kb, IS SO AWESOME!
 
 ##### Difference with fa-upgrade pre-fa API config and fa-upgrade post-fa API config
 
 - fa-upgrade pre-fa API config total: 78.17
-- fa-upgrade post-fa API config total: 71.4
+- fa-upgrade post-fa API config total: 71.32
 
-  - **_difference: lost 6.77kb_**
+  - **_difference: lost 6.85kb_**
 
 So, redirecting the fa auto injected css from the dom to a stylesheet where purgecss has access to it IS SO AWESOME!
 
@@ -251,7 +251,7 @@ So, redirecting the fa auto injected css from the dom to a stylesheet where purg
 | resource | master | fa-upgrade pre-API config | fa-upgrade post-API config |
 | -------- | ------ | ------------------------- | -------------------------- |
 | html     | 2.03   | 12.69                     | 5.65                       |
-| css      | 5.59   | 3.16                      | 3.43                       |
+| css      | 5.59   | 3.16                      | 3.35                       |
 | jpg      | 62.32  | 62.32                     | 62.32                      |
 | woff2a   | 153.38 | 0                         | 0                          |
 | woff2b   | 73.05  | 0                         | 0                          |
