@@ -165,6 +165,7 @@ A	@	104.198.14.52	1 Hour
   - solved the npm config bug by [changing the env variable syntax in the npm config file](https://stackoverflow.com/a/48728994/2145103), via commit #a34a7b0.
     - Also, see my [!SO answer to the same question](https://stackoverflow.com/a/55441931/2145103) I had!!
     - Also see [this gist guidance](https://stackoverflow.com/a/55441931/2145103) as a result of my work on this branch.
+  - Once the font awesome svg in js, and vue-fontawesome, and npm installing from private repo is all set up, the next thing to do is optimize perf by interveing in the css that fontawesome-svg-core auto injects into the dom. See [the api docs](https://fontawesome.com/how-to-use/with-the-api/setup/configuration).
 
 ### Analysis of the perf impact of refactoring font awesome usage
 
