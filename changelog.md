@@ -150,3 +150,134 @@ CNAME	www	zelip.netlify.com	1 Hour
 
 A	@	104.198.14.52	1 Hour
 ```
+
+## 6. Refactor font-awesome from css/webfonts to svg/vue components
+
+- starting point: v1.0.0
+- ending point: v1.1.0
+- branch: fa-upgrade
+- steps:
+  - follow the [vue-awesome docs](https://github.com/Justineo/vue-awesome)
+  - will need to use the fontawesome token for their private npm registry
+    - this requires use of netlify's environment variables that i'll have to look into
+  - included looking into the [.npmrc file](https://docs.npmjs.com/files/npmrc) and environment variables
+  - set up netlify build environment variable for font awesome pro token
+  - solved the npm config bug by [changing the env variable syntax in the npm config file](https://stackoverflow.com/a/48728994/2145103), via commit #a34a7b0.
+    - Also, see my [!SO answer to the same question](https://stackoverflow.com/a/55441931/2145103) I had!!
+    - Also see [this gist guidance](https://stackoverflow.com/a/55441931/2145103) as a result of my work on this branch.
+  - Once the font awesome svg in js, and vue-fontawesome, and npm installing from private repo is all set up, the next thing to do is optimize perf by interveing in the css that fontawesome-svg-core auto injects into the dom. See [the api docs](https://fontawesome.com/how-to-use/with-the-api/setup/configuration).
+
+### Analysis of the perf impact of refactoring font awesome usage
+
+#### zelip.me, master branch, behind fa-upgrade branch
+
+- html: 2.03kb
+- css: 5.59kb
+- jpg: 62.32kb
+- fa-light.woff2: 153.38kb
+- fa-brands.woff2: 73.05kb
+  - **Total: 296.37**
+
+#### fa-upgrade branch, before fa API config autoAddCss
+
+- html: 12.69kb (gained 10.66)
+- css: 3.16kb (lost 2.43)
+- jpg: 62.32kb
+- webfonts (lost 226.43)
+  - **Total: 78.17**
+
+##### Difference with master, pre-fa API config, and considering webfonts
+
+**_Difference: 218.2kb, or 73.6% reduction_**
+
+The difference is:
+
+- increased html (+10.66kb): because swapping one line element `<i>` for multi-line `<svg>` and injecting css into `<head>`, to a tune off PLUS 10.66
+
+- decreased css (-2.43kb): because deletion of css and webfonts dependency, and new svg in js font-awesome styles injected into dom not stylesheet
+
+- deleted webfonts (-226.43kb): because deletion of css and webfonts dependency
+
+##### Difference with master, pre-fa API config, and NOT considering webfonts
+
+- master branch total, no webfonts: 69.94
+- fa-upgrade branch total: 78.17
+
+  - **_difference: gained 8.23kb_**
+
+So, not considering web fonts, master is better. And yes, web fonts get cached, so after initial load, the fonts are cached. But, first impression matters, cause how many folks will be going to _this_ site. (A different site may be a very different matter, tought for the future.) And yes, mobile matters. So the webfonts loss is great. But, I'm going to find a way to remove more css soon, so stay tuned!
+
+#### fa-upgrade branch, after fa API config autoAddCss
+
+- html: 5.65kb
+- css: 3.35kb
+- jpg: 62.32kb
+- webfonts (lost 226.43)
+  - **Total: 71.32**
+
+##### Difference with master, post-fa API config, and considering webfonts
+
+- master total = 296.37
+- this branch point total = 71.32
+
+**_Difference: 225.05kb, or 75.9% reduction_**
+
+- increased html (+3.62kb): because swapping one line element `<i>` for multi-line `<svg>`, and no injected styles in the `<head>`
+
+- decreased css (-2.24kb): because deletion of css and webfonts dependency, and added styles to css via main.css
+
+- deleted webfonts (-226.43kb): because deletion of css and webfonts dependency
+
+##### Difference with master, post-fa API config, and NOT considering webfonts
+
+- master branch total, no webfonts: 69.94
+- fa-upgrade branch total: 71.32
+
+  - **_difference: gained 1.38kb_**
+
+So, the difference for desktop being a gain of 1.38kb, while the loss for mobile being over 100kb, IS SO AWESOME!
+
+##### Difference with fa-upgrade pre-fa API config and fa-upgrade post-fa API config
+
+- fa-upgrade pre-fa API config total: 78.17
+- fa-upgrade post-fa API config total: 71.32
+
+  - **_difference: lost 6.85kb_**
+
+So, redirecting the fa auto injected css from the dom to a stylesheet where purgecss has access to it IS SO AWESOME!
+
+#### Analysis conclusion
+
+| resource | master | fa-upgrade pre-API config | fa-upgrade post-API config |
+| -------- | ------ | ------------------------- | -------------------------- |
+| html     | 2.03   | 12.69                     | 5.65                       |
+| css      | 5.59   | 3.16                      | 3.35                       |
+| jpg      | 62.32  | 62.32                     | 62.32                      |
+| woff2a   | 153.38 | 0                         | 0                          |
+| woff2b   | 73.05  | 0                         | 0                          |
+
+\* all numbers in kb
+
+### On configuring Purgecss for font awesome, or
+
+On getting fa-svg-core and vue-fontawesome together to play nicely with purgecss
+
+this branch added the following to purgecss.config.js:
+
+```js
+{
+  whitelistPatterns: [/svg-inline--fa/, /fa-w-14$/, /fa-w-16$/],
+  keyframes: true
+}
+```
+
+**The reason for the file update**
+
+I thought this branch's work was complete, until I looked at the branch preview and found that the FA styles were not being applied to the FA icons (that is, the icons were rendered, but the icons were YUUUGE). Inspecting the built css file, sure enough, the only FA-specific styles that made it to production were a pair of @keyframes.
+
+I tried a bunch of adjustments, but nothing worked.
+
+Then I finally read the [Purgecss configuration docs](https://www.purgecss.com/configuration).
+
+- `keyframes: true`, eleminates any unused keyframes
+- `whitelistPatterns: [/svg-inline--fa/, /fa-w-14$/, /fa-w-16$/]`, gets the four styles needed to render my use of FA

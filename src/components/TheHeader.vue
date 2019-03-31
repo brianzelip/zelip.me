@@ -14,28 +14,40 @@
             class="h2 white sm-px0 sm-m0 green-underline text-decoration-none lh-1"
             href="mailto:brian.zelip@gmail.com"
           >
-            <i class="fal fa-envelope sm-hide"></i>
+            <FontAwesomeIcon
+              :icon="envelope"
+              class="sm-hide"
+            ></FontAwesomeIcon>
             <span class="none sm-block">Email</span>
           </a>
           <a
             class="h2 white sm-px0 sm-m0 green-underline text-decoration-none lh-1"
             href="https://github.com/brianzelip"
           >
-            <i class="fab fa-github sm-hide"></i>
+            <FontAwesomeIcon
+              :icon="github"
+              class="sm-hide"
+            ></FontAwesomeIcon>
             <span class="none sm-block">GitHub</span>
           </a>
           <a
             class="h2 white sm-px0 sm-m0 green-underline text-decoration-none lh-1"
             href="https://twitter.com/bzelip"
           >
-            <i class="fab fa-twitter sm-hide"></i>
+            <FontAwesomeIcon
+              :icon="twitter"
+              class="sm-hide"
+            ></FontAwesomeIcon>
             <span class="none sm-block">Twitter</span>
           </a>
           <a
             class="h2 white sm-px0 sm-m0 green-underline text-decoration-none lh-1"
             href="https://www.linkedin.com/in/zelip"
           >
-            <i class="fab fa-linkedin-in sm-hide"></i>
+            <FontAwesomeIcon
+              :icon="linkedin"
+              class="sm-hide"
+            ></FontAwesomeIcon>
             <span class="none sm-block">LinkedIn</span>
           </a>
         </nav>
@@ -43,3 +55,34 @@
     </div>
   </header>
 </template>
+
+<script>
+import { config } from "@fortawesome/fontawesome-svg-core";
+import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
+import { faEnvelope } from "@fortawesome/pro-light-svg-icons";
+import {
+  faGithub,
+  faTwitter,
+  faLinkedinIn
+} from "@fortawesome/free-brands-svg-icons";
+
+config.autoAddCss = false;
+
+export default {
+  components: { FontAwesomeIcon },
+  computed: {
+    envelope() {
+      return faEnvelope;
+    },
+    github() {
+      return faGithub;
+    },
+    twitter() {
+      return faTwitter;
+    },
+    linkedin() {
+      return faLinkedinIn;
+    }
+  }
+};
+</script>
