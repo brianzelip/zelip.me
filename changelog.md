@@ -288,6 +288,6 @@ Then I finally read the [Purgecss configuration docs](https://www.purgecss.com/c
 
 I ran into a Netlify build failure when I published the above v1.1.0 work.
 
-I struggled quite a bit and pivoted to two repos ([one](https://github.com/brianzelip/fa-pro-netlify-test), [two](https://github.com/brianzelip/npm-private-mods-test)) to finally figure the somewhat mundane solution.
+I struggled quite a bit and pivoted to two repos ([first](https://github.com/brianzelip/fa-pro-netlify-test), [second](https://github.com/brianzelip/npm-private-mods-test)) to finally figure the somewhat mundane solution.
 
-**tl;dr**: create shell-based persistant environment variables, and use the curly braces variable syntax in .npmrc for local dev and Netlify builds.
+**tl;dr**: create shell-based persistant environment variables, and use the curly braces variable syntax in .npmrc for local dev and Netlify builds 🍻
