@@ -10,5 +10,6 @@ Development stack:
 - [markdown-it](https://github.com/markdown-it/markdown-it), render markdown in javascript
 - [parcel-plugin-prerender](https://github.com/ABuffSeagull/parcel-plugin-prerender), prerender the vue app into a static site
 - [parcel-plugin-purgecss](https://github.com/cprecioso/parcel-plugin-purgecss), ship the minimum css
-- [GitHub](), source code repository
-- [Netlify](), continuous deployment from a git repository, HTTPS/TLS certificate via Let's Encrypt
+- [vue-fontawesome](https://github.com/FortAwesome/vue-fontawesome), Vue component for Font Awesome icons
+- [GitHub](https://github.com/brianzelip/zelip.me), source code repository
+- [Netlify](https://zelip.netlify.com/), continuous deployment from a git repository, custom domain, HTTPS/TLS certificate via Let's Encrypt
