@@ -258,9 +258,7 @@ So, redirecting the fa auto injected css from the dom to a stylesheet where purg
 
 \* all numbers in kb
 
-### On configuring Purgecss for font awesome, or
-
-On getting fa-svg-core and vue-fontawesome together to play nicely with purgecss
+### On configuring Purgecss for font awesome, or, On getting fa-svg-core and vue-fontawesome together to play nicely with purgecss
 
 this branch added the following to purgecss.config.js:
 
@@ -281,3 +279,15 @@ Then I finally read the [Purgecss configuration docs](https://www.purgecss.com/c
 
 - `keyframes: true`, eleminates any unused keyframes
 - `whitelistPatterns: [/svg-inline--fa/, /fa-w-14$/, /fa-w-16$/]`, gets the four styles needed to render my use of FA
+
+## 7. Fix build failure
+
+- starting point: v1.1.0
+- ending point: v1.1.1
+- branch: fix-install-bug
+
+I ran into a Netlify build failure when I published the above v1.1.0 work.
+
+I struggled quite a bit and pivoted to two repos ([first](https://github.com/brianzelip/fa-pro-netlify-test), [second](https://github.com/brianzelip/npm-private-mods-test)) to finally figure the somewhat mundane solution.
+
+**tl;dr**: create shell-based persistant environment variables, and use the curly braces variable syntax in .npmrc for local dev and Netlify builds 🍻
