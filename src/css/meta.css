@@ -1,9 +1,4 @@
 @charset "UTF-8";
-/* this file is a hack around the way parcel builds
-   asset trees and uses cssnano, ie: when this data 
-   is included at the top of ./main.css, the parcel
-   output starts with all the includes first, then 
-   includes this data, see https://parceljs.org/transforms.html#set-cssnano-minify-config */
 /*!
   *******************************************
   * zelip.me.css                            *
