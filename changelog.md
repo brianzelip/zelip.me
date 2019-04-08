@@ -291,3 +291,15 @@ I ran into a Netlify build failure when I published the above v1.1.0 work.
 I struggled quite a bit and pivoted to two repos ([first](https://github.com/brianzelip/fa-pro-netlify-test), [second](https://github.com/brianzelip/npm-private-mods-test)) to finally figure the somewhat mundane solution.
 
 **tl;dr**: create shell-based persistant environment variables, and use the curly braces variable syntax in .npmrc for local dev and Netlify builds 🍻
+
+## 8. Refactor Basscss from local file to project dependency
+
+- starting point: v1.1.1
+- ending point: v1.2.0
+- branch: basscss
+
+steps:
+
+1. delete src/css/basscss
+2. install basscss@7.1.1
+3. update main.css
