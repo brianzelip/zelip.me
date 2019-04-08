@@ -303,3 +303,14 @@ steps:
 1. delete src/css/basscss
 2. install basscss@7.1.1
 3. update main.css
+
+## 9. Slim down local (non-dependency) css files
+
+- starting point: v1.2.0
+- ending point: v1.2.1
+- branch: slim-css
+
+steps:
+
+- remove some of the unused css classes from design explorations
+- remove some long meta comments in meta.css
