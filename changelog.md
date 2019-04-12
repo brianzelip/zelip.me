@@ -330,3 +330,5 @@ Here's the main stuff that needs to happen for this:
 - move all project code into a root level dir with the name of the project, ie: 'talks/', for zelip.me/talks/
 - update all asset links to $PROJECTNAME/$ASSET/, whereas before it was, $ASSET/
 - update the _redirects file in zelip.me
+
+There's no branch name on this entry, because in order to debug _redirects, the work needs to be available at zelip.me, which is necessarily the master branch. Same thing is true with the changes I'm making to github.com/brianzelip/talks - all work related to this is on the master branch, which is another strike against netlify in this regard.
