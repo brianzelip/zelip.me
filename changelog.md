@@ -314,3 +314,19 @@ steps:
 
 - remove some of the unused css classes from design explorations
 - remove some long meta comments in meta.css
+
+## 10. Migrate GH-Pages sub directory projects to Netlify
+
+While migrating my home page to netlify has been great fun, the downside that I did not anticipate is that there is no longer access to all the projects I had publicaly available as sub directories to zelip.me, ie: zelip.me/talks.
+
+I've spent a lot of time trying to make this as automated as possible, but the reality is, there's lots of hands-on work ahead of me now that I've decided to move my home page to netlify.
+
+(Maybe it's time to move back to GH Pages - hope my GH Actions beta invite gets accepted!)
+
+Here's the main stuff that needs to happen for this:
+
+- point each GH repo settings to netlify
+- configure each new netlify site
+- move all project code into a root level dir with the name of the project, ie: 'talks/', for zelip.me/talks/
+- update all asset links to $PROJECTNAME/$ASSET/, whereas before it was, $ASSET/
+- update the _redirects file in zelip.me
