@@ -351,3 +351,13 @@ Using Netlify, however, provides such a list (\_redirects) as a byproduct of the
 Being explicit about things brings you another step closer to automation. So, yes, go forward with Netlify.
 
 Ultimately, in going with Netlify, I'm being _more_ explicit about _my_ build processes, and my projects. I didn't have to be so before via GH, which is a benefit, but also a drawback in the sense of the personal growth that I've experienced in just the last month in trying to get this new system for a personal site set up. ie: In being explicit, and logging things, and even in taking one or two more steps that I did with GH (like createing a root directory for each project that contains the real project files, ie: talks/talks, and changing all asset links to /talks/...), I'm gaining much more in flexibility, capacity (serve apps!), and control.
+
+**This means I need to create a netlify-theory repo!**
+
+Now I get to explicitly plan out what I want available via my personal site:
+
+- home page
+- talks list
+- cv doc
+- blog list
+- software projects list
