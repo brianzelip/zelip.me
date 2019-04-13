@@ -347,3 +347,5 @@ Not only can I create the GH project pages effect (albeit with extra convolusion
 Another big point - when using GH pages, I don't really have a grasp on what all is published behind brianzelip.github.io. This is to say, there's no easy way of looking up which GH repos I've configured to be GH Pages-enabled.
 
 Using Netlify, however, provides such a list (\_redirects) as a byproduct of the covolutedness. I have to be EXPLICIT in documentation about what projects are published at zelip.me, this makes \_redirects be a kind of log of what is currently published to my site, since, in order to publish something extra, I have to configure it via \_redirecs. Not so with GH Pages - I have no clue what all is available at brianzelip.github.io/\*, even though I can trust that it is there.
+
+Being explicit about things brings you another step closer to automation. So, yes, go forward with Netlify.
