@@ -328,7 +328,22 @@ Here's the main stuff that needs to happen for this:
 - point each GH repo settings to netlify
 - configure each new netlify site
 - move all project code into a root level dir with the name of the project, ie: 'talks/', for zelip.me/talks/
-- update all asset links to $PROJECTNAME/$ASSET/, whereas before it was, $ASSET/
-- update the _redirects file in zelip.me
+- update all asset links to $PROJECTNAME/$ASSET/, whereas before it was, \$ASSET/
+- update the \_redirects file in zelip.me
 
-There's no branch name on this entry, because in order to debug _redirects, the work needs to be available at zelip.me, which is necessarily the master branch. Same thing is true with the changes I'm making to github.com/brianzelip/talks - all work related to this is on the master branch, which is another strike against netlify in this regard.
+There's no branch name on this entry, because in order to debug \_redirects, the work needs to be available at zelip.me, which is necessarily the master branch. Same thing is true with the changes I'm making to github.com/brianzelip/talks - all work related to this is on the master branch, which is another strike against netlify in this regard.
+
+HOWEVER...
+
+I've been putting more thought into this dilemma, and I'm coming to side with Netlify. Here's why...
+
+Ultimately, Netlify gives me more control over _publishing_.
+
+Not only can I create the GH project pages effect (albeit with extra convolusions, but these convolusions are the price to pay for the above mentioned more control), but I can also create sub domains to zelip.me for projects outside the scope of sub directories, ie:
+
+- talks is in sub dir scope
+- groceries is in sud domain scope
+
+Another big point - when using GH pages, I don't really have a grasp on what all is published behind brianzelip.github.io. This is to say, there's no easy way of looking up which GH repos I've configured to be GH Pages-enabled.
+
+Using Netlify, however, provides such a list (\_redirects) as a byproduct of the covolutedness. I have to be EXPLICIT in documentation about what projects are published at zelip.me, this makes \_redirects be a kind of log of what is currently published to my site, since, in order to publish something extra, I have to configure it via \_redirecs. Not so with GH Pages - I have no clue what all is available at brianzelip.github.io/\*, even though I can trust that it is there.
