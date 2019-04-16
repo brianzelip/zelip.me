@@ -2,7 +2,7 @@
 
 /talks https://zelip-talks.netlify.com/talks 200!
 /talks/ https://zelip-talks.netlify.com/talks 200!
-/talks/using-github https://zelip-talks.netlify.com/talks/using-github/ 200!
-/talks/node-mvc https://zelip-talks.netlify.com/talks/node-mvc/ 200!
-/talks/azellaz-jamstack https://zelip-talks.netlify.com/talks/azellaz-jamstack/ 200!
+/talks/using-github https://zelip-talks.netlify.com/talks/using-github/ 301!
+/talks/node-mvc https://zelip-talks.netlify.com/talks/node-mvc/ 301!
+/talks/azellaz-jamstack https://zelip-talks.netlify.com/talks/azellaz-jamstack/ 301!
 /talks/* https://zelip-talks.netlify.com/talks/:splat 200!
