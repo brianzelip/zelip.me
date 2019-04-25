@@ -361,3 +361,10 @@ Now I get to explicitly plan out what I want available via my personal site:
 - cv doc
 - blog list
 - software projects list
+
+## 11. Change avatar
+
+- starting point: v1.2.1
+- ending point: v1.2.2
+- branch: update-avatar
+- steps: swap out old headshot pic with new pic
