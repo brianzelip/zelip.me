@@ -4,7 +4,7 @@
       <img
         alt="Brian Zelip"
         class="circle mb1 sm-mb0 sm-mr2 w-200px md-250px"
-        src="../img/bz-livingroom0.jpg"
+        src="../img/bz-linden.jpg"
       >
       <div class="px1 center sm-left-align">
         <h1 class="m0 h0 lh-1p2 white">Brian Zelip</h1>
