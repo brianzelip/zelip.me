@@ -368,3 +368,13 @@ Now I get to explicitly plan out what I want available via my personal site:
 - ending point: v1.2.2
 - branch: update-avatar
 - steps: swap out old headshot pic with new pic
+
+## 12. Use palette.css
+
+- starting point: v1.2.2
+- ending point: v1.3.0
+- branch: palette.css
+- steps:
+  - npm uninstall -S basscss
+  - npm i -S palette.css
+  - update main.css
