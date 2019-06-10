@@ -368,3 +368,14 @@ Now I get to explicitly plan out what I want available via my personal site:
 - ending point: v1.2.2
 - branch: update-avatar
 - steps: swap out old headshot pic with new pic
+
+## [1.2.3] - 2019-06-09
+
+### Meta
+
+- branch: security-fix
+
+### Updated
+
+- package*: Run npm audit fix to fix 14 vulnerabilities
+- changeloge.md: Started with keep a changelog entry syntax
