@@ -12,7 +12,7 @@
         <nav class="flex flex-wrap justify-around sm-justify-between mt1 sm-mt2">
           <a
             class="h2 white sm-px0 sm-m0 green-underline text-decoration-none lh-1"
-            href="mailto:brian.zelip@gmail.com"
+            href="mailto:bzelip@protonmail.com"
           >
             <FontAwesomeIcon
               :icon="envelope"
