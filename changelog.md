@@ -380,13 +380,21 @@ Now I get to explicitly plan out what I want available via my personal site:
 - package\*: Run npm audit fix to fix 14 vulnerabilities
 - changeloge.md: Started with keep a changelog entry syntax
 
-## [1.2.4] - 2019-11-05
+## [1.3.0] - 2019-11-05
 
 ### Meta
 
 - branch: master
-- description: update email address
+- description: add static now.html to build
+
+### Added
+
+- parcel-plugin-static-files-copy as devDependency
 
 ### Updated
 
 - index.html: change email to protonmail
+- now.html:
+  - add Then section
+  - move file to now/ directory
+  - rename file to now/index.html
