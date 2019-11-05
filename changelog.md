@@ -377,5 +377,16 @@ Now I get to explicitly plan out what I want available via my personal site:
 
 ### Updated
 
-- package*: Run npm audit fix to fix 14 vulnerabilities
+- package\*: Run npm audit fix to fix 14 vulnerabilities
 - changeloge.md: Started with keep a changelog entry syntax
+
+## [1.2.4] - 2019-11-05
+
+### Meta
+
+- branch: master
+- description: update email address
+
+### Updated
+
+- index.html: change email to protonmail
