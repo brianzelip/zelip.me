@@ -380,7 +380,7 @@ Now I get to explicitly plan out what I want available via my personal site:
 - package\*: Run npm audit fix to fix 14 vulnerabilities
 - changeloge.md: Started with keep a changelog entry syntax
 
-## [1.3.0] - 2019-11-05
+## [1.3.0] - 2019-11-06
 
 ### Meta
 
