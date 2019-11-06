@@ -384,7 +384,7 @@ Now I get to explicitly plan out what I want available via my personal site:
 
 ### Meta
 
-- branch: master
+- branch: static
 - description: add static now.html and humans.txt to build
 
 ### Added
