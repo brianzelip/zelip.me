@@ -28,6 +28,7 @@
     "parcel-plugin-markdown-string": "^1.4.2",
     "parcel-plugin-prerender": "^1.1.0",
     "parcel-plugin-purgecss": "^2.1.0",
+    "parcel-plugin-static-files-copy": "^2.2.1",
     "vue-template-compiler": "^2.6.10"
   }
 }
