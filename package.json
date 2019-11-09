@@ -9,7 +9,7 @@
   "private": true,
   "scripts": {
     "start": "parcel index.html",
-    "build": "rm -rf dist .cache && parcel build index.html && node postBuild.js"
+    "build": "rm -rf dist .cache && parcel build index.html && node removeBundleFromHtml.js"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.17",
