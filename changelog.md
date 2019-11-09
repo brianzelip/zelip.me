@@ -399,3 +399,18 @@ Now I get to explicitly plan out what I want available via my personal site:
 - now.html:
   - add Then section
   - move file to static/now/ as index.html
+
+## [1.3.1] - 2019-11-09
+
+### Meta
+
+- branch: scripts-update
+- description:
+  - Move \_redirects file into static/ and remove the copying of \_redirects from npm build script. Before using the static files copy plugin, I was making the netlify \_redirects file part of the parcel build by copying it to dist/ after the parcel build - let's add this file to the static dir for consistency among static files.
+  - Rename postBuild.js to removeBundleFromHtml.js
+
+### Updated
+
+- package.json: Remove the command that copies \_redirects from the build script
+- \_redirects: Move to static/
+- postBuild.js: rename removeBundleFromHtml.js
