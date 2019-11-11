@@ -16,3 +16,10 @@ everything i look up more than once should be an entry in my knowledge base
   - tutorials
 - music
 - family
+
+## Discussions on personal knowledge base
+
+- thread https://news.ycombinator.com/item?id=21332957
+  - comment https://news.ycombinator.com/item?id=21333383
+- https://news.ycombinator.com/item?id=21310030
+- https://github.com/chrisalbon/notes
