@@ -3,4 +3,23 @@
 - [Monica Dinculescu](https://meowni.ca/)
   - [Metronomes in JS](https://meowni.ca/posts/metronomes/)
   - Jenn Schiffer, JLord, and them
+- Tatianna Mac
+- Henry.codes
+- Zach Leatherman
+- Wilto
+- Andy Bell
+- Muan
+- Jenn Schiffer
+- 100 Rabits
+  - so
+  - many
+  - things
+- [Anders Damsgaard](https://adamsgaard.dk/index.html)
+  - scientific computing and web design
+  - built [scholarref](https://adamsgaard.dk/scholarref.html), cli to get scholarly article pdfs w/ out visiting the journal's website
+- John Otander
+- Adam Morse
+- jxnblk
+- Broccolini
+- Brad Frost
 -
