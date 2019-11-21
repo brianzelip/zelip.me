@@ -1,58 +1,60 @@
-# Changelog
+# 1. Changelog
 
 All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [Unreleased]
+## 1.1. [Unreleased]
 
-## [1.3.2] - 2019-11-10
+- update bio
 
-### Meta
+## 1.2. [1.3.2] - 2019-11-10
+
+### 1.2.1. Meta
 
 - branch: master
 - description:
   - Refactor changelog.md to my current usage protocol
   - add knowledge base notes as static files to be copied to build
 
-### Added
+### 1.2.2. Added
 
 - kb/kb.md: initial knowledge base notes
 
-### Updated
+### 1.2.3. Updated
 
 - changelog.md: Ordered the entries from youngest to oldest, added sections to older entries that did not conform to https://keepachangelog.com/en/1.0.0/
 - package.json: Add staticFiles properties to configure multiple static dirs
 
-## [1.3.1] - 2019-11-09
+## 1.3. [1.3.1] - 2019-11-09
 
-### Meta
+### 1.3.1. Meta
 
 - branch: scripts-update
 - description:
   - Move \_redirects file into static/ and remove the copying of \_redirects from npm build script. Before using the static files copy plugin, I was making the netlify \_redirects file part of the parcel build by copying it to dist/ after the parcel build - let's add this file to the static dir for consistency among static files.
   - Rename postBuild.js to removeBundleFromHtml.js
 
-### Updated
+### 1.3.2. Updated
 
 - package.json: Remove the command that copies \_redirects from the build script
 - \_redirects: Move to static/
 - postBuild.js: rename removeBundleFromHtml.js
 
-## [1.3.0] - 2019-11-06
+## 1.4. [1.3.0] - 2019-11-06
 
-### Meta
+### 1.4.1. Meta
 
 - branch: static
 - description: add static now.html and humans.txt to build
 
-### Added
+### 1.4.2. Added
 
 - parcel-plugin-static-files-copy as devDependency
 - humans.txt
 
-### Updated
+### 1.4.3. Updated
 
 - npm audit fix: updated parcel and parcel-plugin-markdown-string
 - index.html: change email to protonmail
@@ -60,27 +62,27 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - add Then section
   - move file to static/now/ as index.html
 
-## [1.2.3] - 2019-06-09
+## 1.5. [1.2.3] - 2019-06-09
 
-### Meta
+### 1.5.1. Meta
 
 - branch: security-fix
 
-### Updated
+### 1.5.2. Updated
 
 - package\*: Run npm audit fix to fix 14 vulnerabilities
 - changeloge.md: Started with keep a changelog entry syntax
 
-## [1.2.2]
+## 1.6. [1.2.2]
 
-### Meta
+### 1.6.1. Meta
 
 - branch: update-avatar
 - description: swap out old headshot pic with new pic
 
-## [1.2.1-migrate]
+## 1.7. [1.2.1-migrate]
 
-### Meta
+### 1.7.1. Meta
 
 - branch: master
 - description:
@@ -88,7 +90,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - Migrate GH-Pages sub directory projects to Netlify
   - No version bump happened as a result of this work, so after the fact I am giving it the version 1.2.1-migrate
 
-### Notes
+### 1.7.2. Notes
 
 While migrating my home page to netlify has been great fun, the downside that I did not anticipate is that there is no longer access to all the projects I had publicaly available as sub directories to zelip.me, ie: zelip.me/talks.
 
@@ -135,9 +137,9 @@ Now I get to explicitly plan out what I want available via my personal site:
 - blog list
 - software projects list
 
-## [1.2.1]
+## 1.8. [1.2.1]
 
-### Meta
+### 1.8.1. Meta
 
 - branch: slim-css
 - description:
@@ -145,9 +147,9 @@ Now I get to explicitly plan out what I want available via my personal site:
     - remove some of the unused css classes from design explorations
     - remove some long meta comments in meta.css
 
-## [1.2.0]
+## 1.9. [1.2.0]
 
-### Meta
+### 1.9.1. Meta
 
 - branch: basscss
 - description: Refactor Basscss from local file to project dependency
@@ -155,14 +157,14 @@ Now I get to explicitly plan out what I want available via my personal site:
   2. install basscss@7.1.1
   3. update main.css
 
-## [1.1.1]
+## 1.10. [1.1.1]
 
-### Meta
+### 1.10.1. Meta
 
 - branch: fix-install-bug
 - description: Fix build failure
 
-### Notes
+### 1.10.2. Notes
 
 I ran into a Netlify build failure when I published the above v1.1.0 work.
 
@@ -170,14 +172,14 @@ I struggled quite a bit and pivoted to two repos ([first](https://github.com/bri
 
 **tl;dr**: create shell-based persistant environment variables, and use the curly braces variable syntax in .npmrc for local dev and Netlify builds 🍻
 
-## [1.1.0]
+## 1.11. [1.1.0]
 
-### Meta
+### 1.11.1. Meta
 
 - branch: fa-upgrade
 - description: Refactor font-awesome from css/webfonts to svg/vue components
 
-### Notes
+### 1.11.2. Notes
 
 - follow the [vue-awesome docs](https://github.com/Justineo/vue-awesome)
 - will need to use the fontawesome token for their private npm registry
@@ -189,9 +191,9 @@ I struggled quite a bit and pivoted to two repos ([first](https://github.com/bri
   - Also see [this gist guidance](https://stackoverflow.com/a/55441931/2145103) as a result of my work on this branch.
 - Once the font awesome svg in js, and vue-fontawesome, and npm installing from private repo is all set up, the next thing to do is optimize perf by interveing in the css that fontawesome-svg-core auto injects into the dom. See [the api docs](https://fontawesome.com/how-to-use/with-the-api/setup/configuration).
 
-#### Analysis of the perf impact of refactoring font awesome usage
+#### 1.11.2.1. Analysis of the perf impact of refactoring font awesome usage
 
-##### zelip.me, master branch, behind fa-upgrade branch
+##### 1.11.2.1.1. zelip.me, master branch, behind fa-upgrade branch
 
 - html: 2.03kb
 - css: 5.59kb
@@ -200,7 +202,7 @@ I struggled quite a bit and pivoted to two repos ([first](https://github.com/bri
 - fa-brands.woff2: 73.05kb
   - **Total: 296.37**
 
-##### fa-upgrade branch, before fa API config autoAddCss
+##### 1.11.2.1.2. fa-upgrade branch, before fa API config autoAddCss
 
 - html: 12.69kb (gained 10.66)
 - css: 3.16kb (lost 2.43)
@@ -208,7 +210,7 @@ I struggled quite a bit and pivoted to two repos ([first](https://github.com/bri
 - webfonts (lost 226.43)
   - **Total: 78.17**
 
-###### Difference with master, pre-fa API config, and considering webfonts
+###### 1.11.2.1.2.1. Difference with master, pre-fa API config, and considering webfonts
 
 **_Difference: 218.2kb, or 73.6% reduction_**
 
@@ -220,7 +222,7 @@ The difference is:
 
 - deleted webfonts (-226.43kb): because deletion of css and webfonts dependency
 
-###### Difference with master, pre-fa API config, and NOT considering webfonts
+###### 1.11.2.1.2.2. Difference with master, pre-fa API config, and NOT considering webfonts
 
 - master branch total, no webfonts: 69.94
 - fa-upgrade branch total: 78.17
@@ -229,7 +231,7 @@ The difference is:
 
 So, not considering web fonts, master is better. And yes, web fonts get cached, so after initial load, the fonts are cached. But, first impression matters, cause how many folks will be going to _this_ site. (A different site may be a very different matter, tought for the future.) And yes, mobile matters. So the webfonts loss is great. But, I'm going to find a way to remove more css soon, so stay tuned!
 
-##### fa-upgrade branch, after fa API config autoAddCss
+##### 1.11.2.1.3. fa-upgrade branch, after fa API config autoAddCss
 
 - html: 5.65kb
 - css: 3.35kb
@@ -237,7 +239,7 @@ So, not considering web fonts, master is better. And yes, web fonts get cached, 
 - webfonts (lost 226.43)
   - **Total: 71.32**
 
-###### Difference with master, post-fa API config, and considering webfonts
+###### 1.11.2.1.3.1. Difference with master, post-fa API config, and considering webfonts
 
 - master total = 296.37
 - this branch point total = 71.32
@@ -250,7 +252,7 @@ So, not considering web fonts, master is better. And yes, web fonts get cached, 
 
 - deleted webfonts (-226.43kb): because deletion of css and webfonts dependency
 
-###### Difference with master, post-fa API config, and NOT considering webfonts
+###### 1.11.2.1.3.2. Difference with master, post-fa API config, and NOT considering webfonts
 
 - master branch total, no webfonts: 69.94
 - fa-upgrade branch total: 71.32
@@ -259,7 +261,7 @@ So, not considering web fonts, master is better. And yes, web fonts get cached, 
 
 So, the difference for desktop being a gain of 1.38kb, while the loss for mobile being over 100kb, IS SO AWESOME!
 
-###### Difference with fa-upgrade pre-fa API config and fa-upgrade post-fa API config
+###### 1.11.2.1.3.3. Difference with fa-upgrade pre-fa API config and fa-upgrade post-fa API config
 
 - fa-upgrade pre-fa API config total: 78.17
 - fa-upgrade post-fa API config total: 71.32
@@ -268,7 +270,7 @@ So, the difference for desktop being a gain of 1.38kb, while the loss for mobile
 
 So, redirecting the fa auto injected css from the dom to a stylesheet where purgecss has access to it IS SO AWESOME!
 
-##### Analysis conclusion
+##### 1.11.2.1.4. Analysis conclusion
 
 | resource | master | fa-upgrade pre-API config | fa-upgrade post-API config |
 | -------- | ------ | ------------------------- | -------------------------- |
@@ -280,7 +282,7 @@ So, redirecting the fa auto injected css from the dom to a stylesheet where purg
 
 \* all numbers in kb
 
-#### On configuring Purgecss for font awesome, or, On getting fa-svg-core and vue-fontawesome together to play nicely with purgecss
+#### 1.11.2.2. On configuring Purgecss for font awesome, or, On getting fa-svg-core and vue-fontawesome together to play nicely with purgecss
 
 this branch added the following to purgecss.config.js:
 
@@ -302,19 +304,19 @@ Then I finally read the [Purgecss configuration docs](https://www.purgecss.com/c
 - `keyframes: true`, eleminates any unused keyframes
 - `whitelistPatterns: [/svg-inline--fa/, /fa-w-14$/, /fa-w-16$/]`, gets the four styles needed to render my use of FA
 
-## [1.0.0]
+## 1.12. [1.0.0]
 
-### Meta
+### 1.12.1. Meta
 
 - branch: domain
 - description: Point custom domain at netlify
 
-### Notes
+### 1.12.2. Notes
 
 - change pointers in godaddy
 - deprecate brianzelip.github.io
 
-#### Netlify custom domain set up resources:
+#### 1.12.2.1. Netlify custom domain set up resources:
 
 1. [Custom Domains](https://www.netlify.com/docs/custom-domains/)
 2. [To WWW or not WWW](https://www.netlify.com/blog/2017/02/28/to-www-or-not-www/)
@@ -332,14 +334,14 @@ CNAME	www	zelip.netlify.com	1 Hour
 A	@	104.198.14.52	1 Hour
 ```
 
-## [0.5.0]
+## 1.13. [0.5.0]
 
-### Meta
+### 1.13.1. Meta
 
 - branch: unbundle
 - description: Programmatically remove the bundle loaded via `<script>` in dist/index.html
 
-### Notes
+### 1.13.2. Notes
 
 Here is the general idea:
 
@@ -362,13 +364,13 @@ removeElement.js does the following:
 2. removes element from file
 3. saves file
 
-## [0.4.0]
+## 1.14. [0.4.0]
 
-### Meta
+### 1.14.1. Meta
 
 - branch: css
 
-### Notes
+### 1.14.2. Notes
 
 - thought about making my own stylesheet of _only_ the styles needed on this project, but I don't really want to put that work into it right now.
 - I'd like to try [Purgecss](https://www.purgecss.com/), via [parcel-plugin-purgecss](https://github.com/cprecioso/parcel-plugin-purgecss)
@@ -430,40 +432,40 @@ I brought in all css files locally, and creted a main.css file that imports all 
 
 After this branch gets merged w/ master, I'm sure the percentage of css content in the repo is going to skyrocket. **Because of this, I still want to work on componentized css!**
 
-## [0.3.0]
+## 1.15. [0.3.0]
 
-### Meta
+### 1.15.1. Meta
 
 - branch: port-existing-site
 - description: Port existing zelip.me UI to this repo
 
-### Notes
+### 1.15.2. Notes
 
 - modify the components already here in the repo
 
 I don't like how I had to create the extra div wrapper for the markdown content. What then happens, is the styles for the markdown content have to go to the parent div for the markdown content to inherit. That's wack.
 
-## [0.2.0]
+## 1.16. [0.2.0]
 
-### Meta
+### 1.16.1. Meta
 
 - branch: markdown
 - description: Add prose content to site build pipeline via markdown
 
-### Notes
+### 1.16.2. Notes
 
 - see README.md for reasons behind this
 - steps:
   - got rid of all the gridsome stuff, kept the vue components and logic
   - got DIY markdown in vue working
 
-## [0.1.0]
+## 1.17. [0.1.0]
 
-### Meta
+### 1.17.1. Meta
 
 - branch: master
 
-### Notes
+### 1.17.2. Notes
 
 This document started at v0.1.0 while working on branch `markdown`, which would achieve v0.2.0.
 
