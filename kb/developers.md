@@ -20,6 +20,7 @@
   - [Brad Frost](#brad-frost)
   - [Ruth John](#ruth-john)
   - [Monica Lent](#monica-lent)
+  - [Ryan Wiemer](#ryan-wiemer)
 
 <!-- /TOC -->
 
@@ -72,3 +73,10 @@
 
 - found via github feed
 - nice way of presenting self via personal site
+
+## 1.18. [Ryan Wiemer](https://www.ryanwiemer.com/)
+
+- found via github feed
+- great portfolio
+  - shows web work well (sort of as grid layout)
+- wife makes things, he does her website
