@@ -1,25 +1,26 @@
 <template>
-  <main class="sm-mt3 md-mt4 sm-mb4 narrow-container white">
+  <TheMain>
     <div class="flex flex-column">
-      <div
-        class="h2 p1 m0 fw-200"
-        v-html="bio"
-      ></div>
+      <div class="h2 p1 m0 fw-200" v-html="bio"></div>
     </div>
-  </main>
+  </TheMain>
 </template>
 
 <script>
 import MarkdownIt from "markdown-it";
 
+import TheMain from "./TheMain.js";
 import Bio from "../content/bio.md";
 
 export default {
+  components: {
+    TheMain,
+  },
   computed: {
     bio() {
       const md = new MarkdownIt();
       return md.render(Bio);
-    }
-  }
+    },
+  },
 };
 </script>
