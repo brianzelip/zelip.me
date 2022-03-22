@@ -1,1 +1,1 @@
-Brian Zelip is a husband, father, librarian, and open source software developer in Baltimore, MD. He runs the University of Maryland [HS/HSL Innovation Space](http://www.hshsl.umaryland.edu/services/ispace), where he collaborates with library users to solve problems through design, 3D printing, and code.
+Brian Zelip is a husband, father, librarian, and software developer in Baltimore, MD. He runs the Web Services Office of the [Network of the National Library of Medicine](https://nnlm.gov/).
