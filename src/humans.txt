@@ -9,11 +9,8 @@
 /* DEVELOPMENT STACK */
   git
   npm
-  Vue.js
-  Parcel.js
-  Parcel prerender plugin
-  Parcel markdown-string plugin
-  Basscss
+  11ty
+  PostCSS
 
 /* DEPLOYMENT STACK */
   Custom domain
@@ -21,11 +18,10 @@
   Netlify
 
 /* THANKS */
-  FontAwesome5: https://fontawesome.com/
   MDN: https://developer.mozilla.org/en-US/
   Stack Overflow: https://stackoverflow.com/
 
 /* SITE */
-  Last update: [in current iteration]
+  Last update: March 2022
   Language: en-US
   Doctype: html5

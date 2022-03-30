@@ -1,6 +1,6 @@
 {
   "name": "zelip.me",
-  "version": "1.3.2",
+  "version": "2.0.0",
   "description": "Brian Zelip's home page.",
   "author": {
     "name": "Brian Zelip",
@@ -8,20 +8,26 @@
   },
   "private": true,
   "scripts": {
-    "dev": "astro dev",
-    "start": "astro dev",
-    "build": "astro build",
-    "preview": "astro preview",
-    "css:purge": "purgecss --css dist/assets/*.css --content dist/**/*.html --output dist/assets/",
-    "11ty": "npx @11ty/eleventy --serve --port=2600"
+    "css:dev": "postcss src/css/styles.css -o src/css/dist/styles.css --watch",
+    "css:build": "postcss src/css/styles.css -o src/css/dist/styles.css",
+    "11ty:dev": "npx @11ty/eleventy --serve --port=2600",
+    "11ty:build": "npx @11ty/eleventy",
+    "dev": "concurrently -n css,11ty \"npm:css:dev\" \"npm:11ty:dev\"",
+    "build": "npm run css:build && npm run 11ty:build",
+    "start": "npm run dev"
   },
   "devDependencies": {
     "@11ty/eleventy": "^1.0.0",
-    "astro": "^0.24.3",
+    "@fullhuman/postcss-purgecss": "^4.1.3",
     "autoprefixer": "^10.4.4",
+    "concurrently": "^7.0.0",
+    "cssnano": "^5.1.5",
+    "postcss": "^8.4.12",
+    "postcss-cli": "^9.1.0",
+    "postcss-import": "^14.1.0",
     "purgecss": "^4.1.3"
   },
   "dependencies": {
-    "@bzelip/basscss7.1.1": "^1.0.0"
+    "palette.css": "^0.3.4"
   }
 }

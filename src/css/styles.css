@@ -1,3 +1,7 @@
+@charset "utf-8";
+
+@import 'palette.css';
+
 body,
 .h0,
 h1,
@@ -104,7 +108,7 @@ h6 {
     margin-top: 3rem;
   }
   .sm-mt2 {
-    margin-top: 1rem 3rem;
+    margin-top: 1rem;
   }
   .sm-mr2 {
     margin-right: 1rem;
@@ -178,4 +182,15 @@ a {
 }
 .fw-200 {
   font-weight: 200;
+}
+
+.nav-icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  line-height: 1;
+  font-size: inherit;
+  overflow: visible;
+  vertical-align: -0.125em;
+  fill: currentColor;
 }
