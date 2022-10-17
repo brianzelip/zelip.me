@@ -1,1 +1,1 @@
-Brian Zelip is a family guy, librarian, software developer, and hip hop junkie in Baltimore, MD. He runs the Web Services Office of the [Network of the National Library of Medicine](https://nnlm.gov/).
+Brian Zelip is a family guy, software developer, librarian, and hip hop junkie in Baltimore, MD. He is the Front End Developer for [ArchivesSpace](https://archivesspace.org), the open source archives information management system. Previously he was Assistant Director of the Web Services Office of the [Network of the National Library of Medicine](https://nnlm.gov/).
