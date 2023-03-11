@@ -17,7 +17,7 @@
     "start": "npm run dev"
   },
   "devDependencies": {
-    "@11ty/eleventy": "^1.0.0",
+    "@11ty/eleventy": "^2.0.0",
     "@fullhuman/postcss-purgecss": "^4.1.3",
     "autoprefixer": "^10.4.4",
     "concurrently": "^7.0.0",
